@@ -1,0 +1,19 @@
+.receipt-paper {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.receipt-paper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(45deg, white 30%, transparent 30%);
+  background-size: 20px 20px;
+}
+html {
+  scroll-behavior: smooth;
+}

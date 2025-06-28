@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="autumn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sovari</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- daisy ui theme starts here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui theme ends here -->
+  </head>
+  <body>
+    <!-- navabar -->
+    <nav class="bg-white navbar shadow-lg top-0 z-50">
+      <div class="max-w-full mx-auto px-16">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html">
+              <img src="./logo.jpg" class="h-10" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+<div class="max-w-2xl mx-auto my-10 px-4">
+  <div class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200">
+    
+    <!-- Header -->
+    <div class="bg-black text-white px-6 py-4 text-center">
+      <h2 class="text-2xl font-bold  mb-4">Complete Your Order</h2>
+      <div class="text-sm opacity-90 flex justify-center gap-8">
+        <span>Order #: <span id="order-number">—</span></span>   <span> Date: <span id="current-date">—</span></span>
+      </div>
+    </div>
+
+    <!-- Form and Receipt -->
+    <form action="https://formspree.io/f/mkgrwrbn" method="POST" id="order-form" class="grid grid-cols-1 gap-8 p-6 bg-gray-50">
+
+      <!-- Product Info -->
+      <div class="grid gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Size</label>
+          <select id="productSize" name="productSize" required class="w-full border rounded-lg px-3 py-2">
+            <option disabled selected>Select size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+          <div class="flex items-center gap-3">
+            <button type="button" id="decrease-qty" class="w-12 text-2xl  flex items-center justify-center h-8 rounded bg-gray-200 font-bold hover:bg-gray-300">−</button>
+            <input type="number" name="quantity" id="quantity" min="1" max="10" value="1" required class="w-full text-center border rounded-lg py-2">
+            <button type="button" id="increase-qty" class="w-12 text-2xl  flex items-center justify-center h-8 rounded bg-gray-200 font-bold hover:bg-gray-300">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Inputs -->
+      <input type="hidden" name="productName" id="productName" />
+      <input type="hidden" name="productPrice" id="productPrice" />
+
+      <!-- Receipt Panel -->
+      <div class="bg-white border border-gray-200 rounded-xl p-4 space-y-2">
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Order Summary</h3>
+        <div id="receipt-items" class="text-sm text-gray-700 flex justify-between">
+          <!-- JS populates here -->
+        </div>
+        <div class="text-sm text-gray-700 flex justify-between">
+          <span>Subtotal</span>
+          <span id="subtotal">PKR 0</span>
+        </div>
+        <div class="text-sm text-gray-700 flex justify-between">
+          <span>Shipping</span>
+          <span class="text-green-600">Free</span>
+        </div>
+        <div class="text-base font-bold flex justify-between border-t pt-2">
+          <span>Total</span>
+          <span id="total">PKR 0</span>
+        </div>
+      </div>
+
+      <!-- Customer Info -->
+      <div class="grid gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" name="customerName" id="customerName" required placeholder="e.g. John Doe" class="w-full border rounded-lg px-3 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Delivery Address</label>
+          <textarea name="customerAddress" id="customerAddress" rows="3" required class="w-full border rounded-lg px-3 py-2" placeholder="Street, City, ZIP"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+          <input type="tel" name="whatsappNumber" id="whatsappNumber" required placeholder="03xx-xxxxxxx" class="w-full border rounded-lg px-3 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+          <input type="email" name="customerEmail" id="customerEmail" required placeholder="you@example.com" class="w-full border rounded-lg px-3 py-2">
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+          Submit Order
+        </button>
+      </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="bg-gray-100 px-6 py-3 text-center text-xs text-gray-500">
+      Thank you for shopping at <strong>Sovari</strong> • Delivery in 3–5 working days
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- footer starts here -->
+        <footer class="bg-black text-white py-16">
+      <div class="max-w-7xl mx-auto px-16">
+        <div class="lg:flex lg:justify-between lg:px-16 px-2">
+          <div class="lg:w-1/2">
+            <h3 class="text-center font-black text-4xl mb-4">Sovari</h3>
+            <p class="text-gray-400 text-xl text-center">
+              Style You Can Wear
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mt-8 lg:mt-0 text-xl font-bold mb-4 text-center">Contact</h3>
+            <ul
+              class="space-y-2 text-gray-400 hover:text-white duration-300 text-center"
+            >
+            <li>
+                <i class="fas fa-map-marker-alt mr-2"></i> Lahore, Pakistan
+              </li>
+              <li>
+                  <li><i class="fas fa-phone mr-2"></i> +92-apna-number</li>
+                    <i class="fas fa-envelope mr-2"></i>
+                    rehan-ki-email@gmail.com
+                  </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>© 2025 Sovari. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer ends here -->
+    <script src="./main.js"></script>
+  </body>
+</html>
