@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="autumn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sovari</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- daisy ui theme starts here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui theme ends here -->
+  </head>
+  <body>
+    <!-- navbar starts here -->
+    <div
+      class="navbar bg-white border-4 border-b shadow-md py-4 rounded-lg z-100 absolute"
+    >
+      <a class="navbar-start pl-8" href="index.html">
+        <img src="./logo.jpg" class="h-10" />
+      </a>
+
+      <div class="navbar-end flex justify-end items-center lg:pr-8 gap-4">
+        <a
+          class="btn bg-white hover:bg-zinc-300 duration-300 p-2 shadow-inner border border-black/10"
+        >
+          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        </a>
+        <a
+          class="btn bg-white hover:bg-zinc-300 duration-300 p-2 shadow-inner border border-black/10"
+        >
+          <i class="fa-solid fa-bag-shopping fa-2xl"></i>
+        </a>
+      </div>
+    </div>
+    <!-- navbar ends here -->
+
+    <!-- hero section starts here -->
+    <div
+      id="hero"
+      class="hero min-h-screen transition-all duration-1000 bg-cover bg-center"
+    >
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content grid text-neutral-content text-center">
+        <div class="max-w-md">
+          <p class="mb-5 text-white font-black text-4xl mb-8">
+            Style You Can Wear
+          </p>
+          <a
+            class="btn bg-black text-white text-xl px-8 py-6 hover:bg-white hover:text-black transition-colors duration-300"
+            >Shop Now</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section ends here -->
+
+    <!-- products starts here -->
+    <div class="hero p-8 min-h-screen">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8"
+        id="product-list"
+      ></div>
+    </div>
+
+    <!-- products ends here -->
+
+<!-- footer starts here -->
+        <footer class="bg-black text-white py-16">
+      <div class="max-w-7xl mx-auto px-16">
+        <div class="lg:flex lg:justify-between lg:px-16 px-2">
+          <div class="lg:w-1/2">
+            <h3 class="text-center font-black text-4xl mb-4">Sovari</h3>
+            <p class="text-gray-400 text-xl text-center">
+              Style You Can Wear
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mt-8 lg:mt-0 text-xl font-bold mb-4 text-center">Contact</h3>
+            <ul
+              class="space-y-2 text-gray-400 hover:text-white duration-300 text-center"
+            >
+            <li>
+                <i class="fas fa-map-marker-alt mr-2"></i> Lahore, Pakistan
+              </li>
+              <li>
+                  <li><i class="fas fa-phone mr-2"></i> +92-apna-number</li>
+                    <i class="fas fa-envelope mr-2"></i>
+                    rehan-ki-email@gmail.com
+                  </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>© 2025 Sovari. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer ends here -->
+    <script src="./main.js"></script>
+  </body>
+</html>
