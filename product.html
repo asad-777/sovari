@@ -26,7 +26,7 @@
     <!-- daisy ui theme ends here -->
   </head>
   <body>
-    <!-- navbar starts here -->
+        <!-- navbar starts here -->
     <div
       class="navbar bg-white fixed top-4 inset-x-0 z-50 max-w-[90%] w-full mx-auto shadow-lg  py-4 rounded-lg z-100 absolute"
     >
@@ -54,44 +54,45 @@
       </div>
     </div>
     <!-- navbar ends here -->
-
-    <!-- hero section starts here -->
-    <div
-      id="hero"
-      class="hero max-h-[90%] h-140 transition-all duration-1000 bg-cover bg-center"
-    >
-      <div class="hero-overlay  bg-opacity-60">
-
-      </div>
-      <div class="hero-content flex justify-around items-center  text-neutral-content text-center">
-        <button id="left-btn-slide" class="btn btn-circle w-12 h-12 bg-white/50 text-black text-xl font-black absolute left-8"><i class="fa-solid fa-arrow-left "></i></button>
-        <div class="max-w-md">
-          <p class="mb-5 text-white font-black text-4xl mb-8">
-            Style You Can Wear
-          </p>
-          <a href="#product-list-1"
-          class="btn bg-black text-white text-xl px-8 py-6 hover:bg-white hover:text-black transition-colors duration-300"
-          >Shop Now</a
-          >
+<!-- product detail section starts here-->
+ <div class="hero min-h-110 mt-4">
+    <div class="hero-content flex items-center  w-full h-full p-16">
+        <div class="w-1/2 h-full flex ">
+            <div class="w-40  flex items-center h-full">
+                <ul class="flex flex-col justify-center items-center gap-4">
+                    <li><img src="\" id="image_id_1" onclick="change_to_1()" onmouseover="change_to_1()" onmouseout="change_to_1()" class="rounded-xl"></li>
+                    <li><img src="\" id="image_id_2" onclick="change_to_2()" onmouseover="change_to_2()" onmouseout="change_to_2()" class="rounded-xl"></li>
+                </ul>
+            </div>
+            <div class="w-90  flex justify-center items-center  h-full">
+                <div class="border rounded-xl">
+                <img src="#" id="image_id" class="border rounded-xl max-w-full">
+                </div>
+            </div>
         </div>
-        <button id="right-btn-slide" class="btn btn-circle w-12 h-12 bg-white/50 text-black text-xl font-black absolute right-8"><i class="fa-solid fa-arrow-right "></i></button>
-        
-      </div>
+        <div class="w-1/2 h-full p-8 ">
+            <h3 id="title_id" class="text-2xl font-black text-left py-4">asad ka sample</h3>
+            <p id="para_id" class="text-md font-semibold text-black/60 py-4">asad ka description</p>
+          <select id="productSize" name="productSize" required class="w-full border bg-white  rounded-lg px-3 py-2">
+            <option disabled selected>Select size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+          <div class="flex items-center gap-3 py-4">
+            <button type="button" id="decrease-qty" class="w-12 text-2xl  flex items-center justify-center h-8 rounded bg-gray-200 font-bold hover:bg-gray-300">−</button>
+            <input type="number" name="quantity" id="quantity" min="1" max="10" value="1" required class="w-full text-center border bg-white rounded-lg py-2">
+            <button type="button" id="increase-qty" class="w-12 text-2xl  flex items-center justify-center h-8 rounded bg-gray-200 font-bold hover:bg-gray-300">+</button>
+          </div>
+        <div class="w-full py-4 flex justify-between px-4 font-semibold ">
+            <span>Price</span>
+            <span id="price_id">Pkr 0.00</span>
+        </div>
+        <button onclick="goToOrderPage()" class="btn bg-black text-white text-center text-xl hover:bg-white hover:text-black duration-300 py-4 h-14 w-full border border-black mt-2">Shop Now</button>
+        </div>
     </div>
-
-    <!-- hero section ends here -->
-
-    <!-- products starts here -->
-    <h2 id="product-list-1" class="text-5xl font-black text-center w-full mt-12 underline underline-offset-4">Products</h2>
-    <div class="hero p-8 min-h-screen">
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8"
-        id="product-list"
-      ></div>
-    </div>
-
-    <!-- products ends here -->
-
+ </div>
+<!-- product detail section ends here-->
 <!-- footer starts here -->
         <footer class="bg-black text-white py-16">
       <div class="max-w-7xl mx-auto px-16">
