@@ -240,4 +240,7 @@ if (window.location.pathname.includes("order.html")) {
   <span>Quantity/${productQuantity}</span>
   <span> - </span>
   <span>Price = ${product.price[productSize]}</span>`;
+  document.getElementById(
+    "order-form"
+  ).action = `https://formspree.io/f/xblyqbdw`;
 }
