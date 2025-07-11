@@ -28,45 +28,28 @@
   <body>
         <!-- navbar starts here -->
     <div
-      class="navbar bg-white fixed top-4 inset-x-0 z-50 max-w-[90%] w-full mx-auto shadow-lg  py-4 rounded-lg z-100 absolute"
+      class="navbar bg-white fixed top-4 inset-x-0 z-50 max-w-[90%] w-full flex justify-center mx-auto shadow-lg  py-4 rounded-lg z-100 absolute"
     >
-      <a class="navbar-start pl-8" href="index.html">
+      <a class=" pl-8" href="index.html">
         <img src="./logo.jpg" class="h-10" />
       </a>
 
-      <div class="navbar-end flex justify-end items-center lg:pr-8 gap-6">
-        
-        <a href="#product-list-1"
-          class="btn bg-white hover:bg-zinc-300 duration-300 p-2 shadow-inner border-b"
-        >
-          <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-        </a>
-        <a href="#product-list-1"
-          class="btn bg-white hover:bg-zinc-300 duration-300 p-2 shadow-inner border-b"
-        >
-          <i class="fa-solid fa-heart fa-2xl"></i>
-        </a>
-        <a href="#product-list-1"
-          class="btn bg-white hover:bg-zinc-300 duration-300 p-2 shadow-inner border-b"
-        >
-          <i class="fa-solid fa-bag-shopping fa-2xl"></i>
-        </a>
-      </div>
+      
     </div>
     <!-- navbar ends here -->
 <!-- product detail section starts here-->
- <div class="hero min-h-110 mt-4">
+ <div class="hero min-h-110 mt-14">
     <div class="hero-content flex items-center  w-full h-full p-16">
-        <div class="w-1/2 h-full flex ">
-            <div class="w-40  flex items-center h-full">
-                <ul class="flex flex-col justify-center items-center gap-4">
-                    <li><img src="\" id="image_id_1" onclick="change_to_1()" onmouseover="change_to_1()" onmouseout="change_to_1()" class="rounded-xl"></li>
-                    <li><img src="\" id="image_id_2" onclick="change_to_2()" onmouseover="change_to_2()" onmouseout="change_to_2()" class="rounded-xl"></li>
+        <div class="w-1/2 h-full flex  rounded-xl">
+            <div class="w-40  flex items-center h-full ">
+                <ul class="flex flex-col justify-center items-center gap-4 w-2/3">
+                    <li><img src="\" id="image_id_1" onclick="change_to_1()" onmouseover="change_to_1()" onmouseout="change_to_1()" class="rounded-xl object-contain "></li>
+                    <li><img src="\" id="image_id_2" onclick="change_to_2()" onmouseover="change_to_2()" onmouseout="change_to_2()" class="rounded-xl object-contain "></li>
                 </ul>
             </div>
             <div class="w-90  flex justify-center items-center  h-full">
                 <div class="border rounded-xl">
-                <img src="#" id="image_id" class="border rounded-xl max-w-full">
+                <img src="#" id="image_id" class="border rounded-xl max-w-full object-cover">
                 </div>
             </div>
         </div>

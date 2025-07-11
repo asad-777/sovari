@@ -1,8 +1,8 @@
 if (window.location.pathname.includes("/index.html")) {
   const images = [
-    "https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp",
-    "https://img.freepik.com/premium-photo/gradient-powerpoint-background-corporate-presentation_167709-225.jpg?semt=ais_hybrid&w=740",
-    "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg",
+    "./images/IMG_111.png",
+    "./images/IMG_112.png",
+    "./images/IMG_113.png",
   ];
 
   let current = 0;
@@ -66,12 +66,12 @@ class Product {
         <img
           src="${this.image1}"
           alt="${this.name}"
-          class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0"
         />
         <img
           src="${this.image2}"
           alt="${this.name}"
-          class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
         />
       </div>
       <h3 class="text-xl font-bold mb-2">${this.name}</h3>
@@ -119,14 +119,35 @@ const productManager = new ProductManager("product-list");
 productManager.addProduct(
   new Product(
     1,
-    "Black Nigga",
-    [1000, 1400, 1500],
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXK3iH0UVyCtSM8VeaBoOBa4rFYij6SAylw&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk8cl_o_IQX4u_VYjBepbv0tXrOllZqD3byw&s",
-    "Premium 2pac inspired nigger for sale"
+    "BMW M4",
+    [1799, 1799, 1799],
+    "./images/IMG_a1417.jpg",
+    "./images/IMG_a1414.jpg",
+    "180  gsm  cotton fabric black  down shoulder T shirt  baggy with BMW M4 Design "
   )
 );
 
+productManager.addProduct(
+  new Product(
+    2,
+    "Baggy F1",
+    [1799, 1799, 1799],
+    "./images/IMG_1441.JPG",
+    "./images/IMG_1440.JPG",
+    "180 gsm  cotton fabric Black  down shoulder T shirt  baggy with F1 design"
+  )
+);
+
+productManager.addProduct(
+  new Product(
+    3,
+    "Ferrari F40",
+    [1799, 1799, 1799],
+    "./images/IMG_1458.JPG",
+    "./images/IMG_1456.JPG",
+    "180 gsm   Cotton fabric white down shoulder T shirt   Baggy with Ferrari F40 design"
+  )
+);
 // Add more as needed...
 if (window.location.pathname.includes("/index.html")) {
   productManager.renderAll();
@@ -242,5 +263,5 @@ if (window.location.pathname.includes("order.html")) {
   <span>Price = ${product.price[productSize]}</span>`;
   document.getElementById(
     "order-form"
-  ).action = `https://formspree.io/f/xblyqbdw`;
+  ).action = `https://formspree.io/f/mrbknowy`;
 }
