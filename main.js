@@ -47,12 +47,11 @@ if (window.location.pathname.includes("/index.html")) {
 }
 
 class Product {
-  constructor(id, name, price, image1, image2, description) {
+  constructor(id, name, price, images, description) {
     this.id = id;
     this.name = name;
     this.price = price;
-    this.image1 = image1;
-    this.image2 = image2;
+    this.images = images;
     this.description = description;
   }
 
@@ -64,12 +63,12 @@ class Product {
     >
       <div class="relative w-full h-48 rounded-lg overflow-hidden mb-4">
         <img
-          src="${this.image1}"
+          src="${this.images[0]}"
           alt="${this.name}"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0"
         />
         <img
-          src="${this.image2}"
+          src="${this.images[1]}"
           alt="${this.name}"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
         />
@@ -121,8 +120,12 @@ productManager.addProduct(
     1,
     "BMW M4",
     [1799, 1799, 1799],
-    "./images/IMG_a1417.jpg",
-    "./images/IMG_a1414.jpg",
+    [
+      "./images/IMG_a1417.jpg",
+      "./images/IMG_a1414.jpg",
+      "./images/IMG_1524.jpg",
+      "./images/IMG_1521.jpg",
+    ],
     "180  gsm  cotton fabric black  down shoulder T shirt  baggy with BMW M4 Design "
   )
 );
@@ -132,8 +135,12 @@ productManager.addProduct(
     2,
     "Baggy F1",
     [1799, 1799, 1799],
-    "./images/IMG_1441.JPG",
-    "./images/IMG_1440.JPG",
+    [
+      "./images/IMG_1441.JPG",
+      "./images/IMG_1440.JPG",
+      "./images/IMG_1529.JPG",
+      "./images/IMG_1528.JPG",
+    ],
     "180 gsm  cotton fabric Black  down shoulder T shirt  baggy with F1 design"
   )
 );
@@ -143,8 +150,12 @@ productManager.addProduct(
     3,
     "Ferrari F40",
     [1799, 1799, 1799],
-    "./images/IMG_1458.JPG",
-    "./images/IMG_1456.JPG",
+    [
+      "./images/IMG_1458.JPG",
+      "./images/IMG_1456.JPG",
+      "./images/IMG_1519.JPG",
+      "./images/IMG_1518.JPG",
+    ],
     "180 gsm   Cotton fabric white down shoulder T shirt   Baggy with Ferrari F40 design"
   )
 );
@@ -201,14 +212,22 @@ if (window.location.pathname.includes("product.html")) {
   });
   document.getElementById("title_id").innerHTML = product.name;
   document.getElementById("para_id").innerHTML = product.description;
-  document.getElementById("image_id").src = product.image1;
-  document.getElementById("image_id_1").src = product.image1;
-  document.getElementById("image_id_2").src = product.image2;
+  document.getElementById("image_id").src = product.images[0];
+  document.getElementById("image_id_1").src = product.images[0];
+  document.getElementById("image_id_2").src = product.images[1];
+  document.getElementById("image_id_3").src = product.images[2];
+  document.getElementById("image_id_4").src = product.images[3];
   function change_to_1() {
-    document.getElementById("image_id").src = product.image1;
+    document.getElementById("image_id").src = product.images[0];
   }
   function change_to_2() {
-    document.getElementById("image_id").src = product.image2;
+    document.getElementById("image_id").src = product.images[1];
+  }
+  function change_to_3() {
+    document.getElementById("image_id").src = product.images[2];
+  }
+  function change_to_4() {
+    document.getElementById("image_id").src = product.images[3];
   }
   // go to order.html with this url
   function goToOrderPage() {
