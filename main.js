@@ -1,4 +1,4 @@
-if (window.location.pathname.includes("/index.html")) {
+if (window.location.pathname.includes("/")) {
   const images = [
     "./images/IMG_111.png",
     "./images/IMG_112.png",
@@ -149,7 +149,7 @@ productManager.addProduct(
   )
 );
 // Add more as needed...
-if (window.location.pathname.includes("/index.html")) {
+if (window.location.pathname.includes("/")) {
   productManager.renderAll();
 }
 
