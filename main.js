@@ -123,8 +123,8 @@ productManager.addProduct(
     [
       "./images/IMG_a1417.jpg",
       "./images/IMG_a1414.jpg",
-      "./images/IMG_1524.jpg",
-      "./images/IMG_1521.jpg",
+      "./images/IMG_1524.JPG",
+      "./images/IMG_1521.JPG",
     ],
     "180  gsm  cotton fabric black  down shoulder T shirt  baggy with BMW M4 Design "
   )
