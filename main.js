@@ -118,7 +118,7 @@ const productManager = new ProductManager("product-list");
 productManager.addProduct(
   new Product(
     1,
-    "BMW M4",
+    "BMW M4 Competition",
     [1799, 1799, 1799],
     [
       "./images/IMG_a1417.jpg",
@@ -133,7 +133,7 @@ productManager.addProduct(
 productManager.addProduct(
   new Product(
     2,
-    "Baggy F1",
+    "RedBull F1",
     [1799, 1799, 1799],
     [
       "./images/IMG_1441.JPG",
@@ -268,7 +268,7 @@ if (window.location.pathname.includes("order.html")) {
     product.price[productSize] * productQuantity
   }`;
   document.getElementById("total").innerHTML = `PKR ${
-    product.price[productSize] * productQuantity
+    product.price[productSize] * productQuantity + 150
   }`;
   const random4Digit = Math.floor(1000 + Math.random() * 9000);
   document.getElementById("order-number").innerHTML = `SV-25-${random4Digit}`;
