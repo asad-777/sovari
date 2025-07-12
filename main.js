@@ -72,31 +72,39 @@ class Product {
   render() {
     return `
     <div
-      class="bg-white/50 px-6 py-4 rounded-xl  shadow-sm border-[1px] hover:-translate-y-2 hover:border-4 hover:shadow-xl duration-300 group cursor-pointer"
+      class="bg-zinc-300/10 backdrop-blur-lg p-6 rounded-2xl shadow-md border-b border-2 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 group cursor-pointer max-w-xs"
       data-id="${this.id}"
     >
-      <div class="relative w-48 h-50 rounded-lg overflow-hidden mb-4">
+      <!-- Image hover switch -->
+      <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden mb-5">
         <img
           src="${this.images[0]}"
           alt="${this.name}"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
         />
         <img
           src="${this.images[1]}"
           alt="${this.name}"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
         />
       </div>
-      <h3 class="text-xl font-bold mb-2">${this.name}</h3>
-      <p class="text-gray-600 mb-4 w-48">${this.description}</p>
-      <div class="flex justify-between items-center">
-        <span class="text-xl font-semibold underline">PKR ${
+
+      <!-- Product Text Info -->
+      <div class="space-y-2">
+        <h3 class="text-lg font-semibold text-black truncate">${this.name}</h3>
+        <p class="text-sm text-gray-600 leading-snug h-12 overflow-hidden">${
+          this.description
+        }</p>
+      </div>
+
+      <!-- Pricing -->
+      <div class="flex justify-between px-4 items-center mt-4">
+        <span class="text-lg font-black text-lime-600">PKR ${
           this.price[0]
         }</span>
-        <span class="text-xl font-semibold line-through text-red-900">PKR ${
+        <span class="text-sm line-through text-red-900">PKR ${
           this.price[0] + 350
         }</span>
-        
       </div>
     </div>
   `;
@@ -141,7 +149,7 @@ productManager.addProduct(
       "./images/IMG_1524.JPG",
       "./images/IMG_1521.JPG",
     ],
-    "180  gsm  cotton fabric black  down shoulder T shirt  baggy with BMW M4 Design "
+    "180 gsm cotton fabric black down shoulder T-shirt baggy with BMW M4 Design"
   )
 );
 
@@ -156,7 +164,7 @@ productManager.addProduct(
       "./images/IMG_1529.JPG",
       "./images/IMG_1528.JPG",
     ],
-    "180 gsm  cotton fabric Black  down shoulder T shirt  baggy with RedBull F1 Design"
+    "180 gsm cotton fabric black down shoulder T-shirt baggy with F1 RedBull Design"
   )
 );
 
@@ -171,7 +179,7 @@ productManager.addProduct(
       "./images/IMG_1519.JPG",
       "./images/IMG_1518.JPG",
     ],
-    "180 gsm   Cotton fabric white down shoulder T shirt   Baggy with Ferrari F40 design"
+    "180 gsm cotton fabric black down shoulder T-shirt baggy with Ferrari F40 Design"
   )
 );
 // Add more as needed...
