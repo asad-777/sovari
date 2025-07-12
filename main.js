@@ -1,9 +1,23 @@
-if (window.location.pathname.includes("/index.html")) {
-  const images = [
-    "./images/IMG_111.png",
-    "./images/IMG_112.png",
-    "./images/IMG_113.png",
-  ];
+if (
+  window.location.pathname === "/" ||
+  window.location.pathname.endsWith("/index.html")
+) {
+  let images = [];
+  if (window.innerWidth > 768) {
+    // Screen is tablet or desktop
+    images = [
+      "./images/IMG_111.png",
+      "./images/IMG_112.png",
+      "./images/IMG_113.png",
+    ];
+  } else {
+    // Screen is mobile
+    images = [
+      "https://wallpapers.com/images/featured/f1-phone-m20bpwsc2e6qh7ti.jpg",
+      "https://preview.redd.it/ferrari-f40-legacy-tour-wallpapers-for-mobile-phone-day-two-v0-qj8e6fe8uu3c1.jpg?width=640&crop=smart&auto=webp&s=225154fc12bffd7dcaae8fd2c0cd33864d6994da",
+      "https://i.pinimg.com/originals/d7/5f/27/d75f272562ed36d562e283a4e7d94456.jpg",
+    ];
+  }
 
   let current = 0;
   const hero = document.getElementById("hero");
@@ -58,10 +72,10 @@ class Product {
   render() {
     return `
     <div
-      class="bg-white p-6 rounded-xl border border-zinc-300/20 shadow-lg hover:-translate-y-2 hover:border-4 hover:shadow-xl duration-300 group cursor-pointer"
+      class="bg-white/50 px-6 py-4 rounded-xl  shadow-sm border-[1px] hover:-translate-y-2 hover:border-4 hover:shadow-xl duration-300 group cursor-pointer"
       data-id="${this.id}"
     >
-      <div class="relative w-full h-48 rounded-lg overflow-hidden mb-4">
+      <div class="relative w-48 h-50 rounded-lg overflow-hidden mb-4">
         <img
           src="${this.images[0]}"
           alt="${this.name}"
@@ -74,14 +88,15 @@ class Product {
         />
       </div>
       <h3 class="text-xl font-bold mb-2">${this.name}</h3>
-      <p class="text-gray-600 mb-4">${this.description}</p>
+      <p class="text-gray-600 mb-4 w-48">${this.description}</p>
       <div class="flex justify-between items-center">
-        <span class="text-xl font-bold">PKR ${this.price[0]}</span>
-        <div
-          class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-900 transition select-none "
-        >
-          Order Now
-        </div>
+        <span class="text-xl font-semibold underline">PKR ${
+          this.price[0]
+        }</span>
+        <span class="text-xl font-semibold line-through text-red-900">PKR ${
+          this.price[0] + 350
+        }</span>
+        
       </div>
     </div>
   `;
@@ -141,7 +156,7 @@ productManager.addProduct(
       "./images/IMG_1529.JPG",
       "./images/IMG_1528.JPG",
     ],
-    "180 gsm  cotton fabric Black  down shoulder T shirt  baggy with F1 design"
+    "180 gsm  cotton fabric Black  down shoulder T shirt  baggy with RedBull F1 Design"
   )
 );
 
@@ -160,7 +175,10 @@ productManager.addProduct(
   )
 );
 // Add more as needed...
-if (window.location.pathname.includes("/index.html")) {
+if (
+  window.location.pathname === "/" ||
+  window.location.pathname.endsWith("/index.html")
+) {
   productManager.renderAll();
 }
 
