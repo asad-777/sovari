@@ -30,7 +30,7 @@
     <div
       class="navbar bg-white fixed top-4 inset-x-0 z-50 max-w-[90%] w-full flex justify-center mx-auto shadow-lg  py-4 rounded-lg z-100 absolute"
     >
-      <a class=" pl-8" href="/">
+      <a class="" href="/">
         <img src="./logo_b.png" class="h-10" />
       </a>
 
@@ -38,45 +38,51 @@
     </div>
     <!-- navbar ends here -->
 <!-- product detail section starts here-->
- <div class="hero min-h-110 mt-16">
-    <div class="hero-content grid lg:grid-cols-2 justify-center  w-full h-full p-16">
-        <div class=" h-full flex  rounded-xl">
-            <div class="w-40  flex items-center ">
-                <ul class="flex flex-col justify-center items-center gap-4 w-2/3">
-                    <li><img src="\" id="image_id_1" onclick="change_to_1()" onmouseover="change_to_1()" onmouseout="change_to_1()" class="rounded-xl object-contain "></li>
-                    <li><img src="\" id="image_id_2" onclick="change_to_2()" onmouseover="change_to_2()" onmouseout="change_to_2()" class="rounded-xl object-contain "></li>
-                    <li><img src="\" id="image_id_3" onmouseover="change_to_3()" class="rounded-xl object-contain "></li>
-                    <li><img src="\" id="image_id_4" onmouseover="change_to_4()" class="rounded-xl object-contain "></li>
-                </ul>
-            </div>
-            <div class="w-90  flex justify-center items-center  ">
-                <div class="border rounded-xl">
-                <img src="#" id="image_id" class="border rounded-xl max-w-full object-cover">
-                </div>
-            </div>
-        </div>
-        <div class=" h-full p-8 ">
-            <h3 id="title_id" class="text-2xl font-black text-left py-4">asad ka sample</h3>
-            <p id="para_id" class="text-md font-semibold text-black/60 py-4">asad ka description</p>
-          <select id="productSize" name="productSize" required class="w-full border bg-white  rounded-lg px-3 py-2">
-            <option disabled selected>Select size</option>
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-          </select>
-          <div class="flex items-center gap-3 py-4">
-            <button type="button" id="decrease-qty" class="w-12 text-2xl  flex items-center justify-center h-8 rounded bg-gray-200 font-bold hover:bg-gray-300">−</button>
-            <input type="number" name="quantity" id="quantity" min="1" max="10" value="1" required class="w-full text-center border bg-white rounded-lg py-2">
-            <button type="button" id="increase-qty" class="w-12 text-2xl  flex items-center justify-center h-8 rounded bg-gray-200 font-bold hover:bg-gray-300">+</button>
-          </div>
-        <div class="w-full py-4 flex justify-between px-4 font-semibold ">
-            <span>Price</span>
-            <span id="price_id">Pkr 0.00</span>
-        </div>
-        <button onclick="goToOrderPage()" class="btn bg-black text-white text-center text-xl hover:bg-white hover:text-black duration-300 py-4 h-14 w-full border border-black mt-2">Shop Now</button>
-        </div>
+<div class="hero mt-24 mb-16 px-4">
+  <div class="hero-content flex flex-col lg:flex-row gap-8 w-full">
+    <!-- Left side - Images -->
+    <div class="flex flex-col lg:flex-row gap-4 items-center w-full lg:w-1/2">
+      <ul class="flex lg:flex-col gap-2 lg:w-1/4 w-full justify-center">
+        <li><img src="\" id="image_id_1" onclick="change_to_1()" class="rounded-xl object-contain w-20 h-20" /></li>
+        <li><img src="\" id="image_id_2" onclick="change_to_2()" class="rounded-xl object-contain w-20 h-20" /></li>
+        <li><img src="\" id="image_id_3" onclick="change_to_3()" class="rounded-xl object-contain w-20 h-20" /></li>
+        <li><img src="\" id="image_id_4" onclick="change_to_4()" class="rounded-xl object-contain w-20 h-20" /></li>
+      </ul>
+      <div class="w-full flex justify-center">
+        <img src="#" id="image_id" class="border rounded-xl w-full max-w-md object-cover" />
+      </div>
     </div>
- </div>
+
+    <!-- Right side - Info -->
+    <div class="w-full lg:w-1/2 space-y-4">
+      <h3 id="title_id" class="text-2xl font-black">asad ka sample</h3>
+      <p id="para_id" class="text-md font-semibold text-black/60">asad ka description</p>
+
+      <select id="productSize" name="productSize" required class="w-full border bg-white rounded-lg px-3 py-2">
+        <option disabled selected>Select size</option>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+
+      <div class="flex items-center gap-3">
+        <button type="button" id="decrease-qty" class="w-10 h-10 text-xl rounded bg-gray-200 font-bold hover:bg-gray-300">−</button>
+        <input type="number" id="quantity" min="1" max="10" value="1" class="w-full text-center border bg-white rounded-lg py-2" />
+        <button type="button" id="increase-qty" class="w-10 h-10 text-xl rounded bg-gray-200 font-bold hover:bg-gray-300">+</button>
+      </div>
+
+      <div class="flex justify-between font-semibold">
+        <span>Price</span>
+        <span id="price_id">PKR 0.00</span>
+      </div>
+
+      <button onclick="goToOrderPage()" class="btn bg-black text-white text-xl hover:bg-white hover:text-black duration-300 py-4 w-full border border-black">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- product detail section ends here-->
 <!-- footer starts here -->
         <footer class="bg-black text-white py-16">
