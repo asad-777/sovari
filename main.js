@@ -1,3 +1,5 @@
+UPLOADCARE_PUBLIC_KEY = "9d38665a02adadb153b7";
+
 if (
   window.location.pathname === "/" ||
   window.location.pathname.endsWith("/index.html")
@@ -317,6 +319,17 @@ if (window.location.pathname.includes("order.html")) {
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
+    const receiptWidget = uploadcare.Widget("[role=uploadcare-uploader]");
+    const receiptFile = await receiptWidget.value();
+
+    if (!receiptFile) {
+      alert("Please upload a payment receipt.");
+      return;
+    }
+
+    // Get CDN link
+    const receiptUrl = receiptFile.cdnUrl;
+    document.getElementById("imageurl").value = receiptUrl;
 
     // Disable and show spinner
     submitBtn.disabled = true;
