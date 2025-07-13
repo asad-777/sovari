@@ -306,7 +306,54 @@ if (window.location.pathname.includes("order.html")) {
   <span>Quantity/${productQuantity}</span>
   <span> - </span>
   <span>Price = ${product.price[productSize]}</span>`;
-  document.getElementById(
-    "order-form"
-  ).action = `https://formspree.io/f/mrbknowy`;
+
+  // form functionality here
+
+  const form = document.getElementById("order-form");
+  const status = document.getElementById("status");
+  const submitBtn = document.getElementById("submit-btn");
+  const btnText = document.getElementById("btn-text");
+  const spinner = document.getElementById("spinner");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Disable and show spinner
+    submitBtn.disabled = true;
+    spinner.classList.remove("hidden");
+    btnText.textContent = "Sending...";
+
+    const formData = new FormData(form);
+    const endpoint1 = "https://formspree.io/f/mrbknowy";
+    const endpoint2 = "https://formspree.io/f/xblyqbdw"; // second endpoint
+
+    try {
+      const [res1, res2] = await Promise.all([
+        fetch(endpoint1, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        }),
+        fetch(endpoint2, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        }),
+      ]);
+
+      if (res1.ok && res2.ok) {
+        window.location.href = "/OrderSubmitted.html"; // ✅ redirect here
+      } else {
+        throw new Error("Submission failed on one or both endpoints.");
+      }
+    } catch (err) {
+      alert("Submission failed. Please try again.");
+      console.error(err);
+    } finally {
+      // Re-enable button and reset UI if not redirected
+      submitBtn.disabled = false;
+      spinner.classList.add("hidden");
+      btnText.textContent = "Send Order";
+    }
+  });
 }
