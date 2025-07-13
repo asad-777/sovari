@@ -8,9 +8,9 @@ if (
   if (window.innerWidth > 768) {
     // Screen is tablet or desktop
     images = [
-      "./images/IMG_111.png",
-      "./images/IMG_112.png",
-      "./images/IMG_113.png",
+      "./images/IMG_111.webp",
+      "./images/IMG_112.webp",
+      "./images/IMG_113.webp",
     ];
   } else {
     // Screen is mobile
@@ -146,10 +146,10 @@ productManager.addProduct(
     "BMW M4 Competition",
     [1799, 1799, 1799],
     [
-      "./images/IMG_a1417.jpg",
-      "./images/IMG_a1414.jpg",
-      "./images/IMG_1524.JPG",
-      "./images/IMG_1521.JPG",
+      "./images/IMG_a1417.webp",
+      "./images/IMG_a1414.webp",
+      "./images/IMG_1524.webp",
+      "./images/IMG_1521.webp",
     ],
     "180 gsm cotton fabric black down shoulder T-shirt baggy with BMW M4 Design"
   )
@@ -161,10 +161,10 @@ productManager.addProduct(
     "RedBull F1",
     [1799, 1799, 1799],
     [
-      "./images/IMG_1441.JPG",
-      "./images/IMG_1440.JPG",
-      "./images/IMG_1529.JPG",
-      "./images/IMG_1528.JPG",
+      "./images/IMG_1441.webp",
+      "./images/IMG_1440.webp",
+      "./images/IMG_1529.webp",
+      "./images/IMG_1528.webp",
     ],
     "180 gsm cotton fabric black down shoulder T-shirt baggy with F1 RedBull Design"
   )
@@ -176,10 +176,10 @@ productManager.addProduct(
     "Ferrari F40",
     [1799, 1799, 1799],
     [
-      "./images/IMG_1458.JPG",
-      "./images/IMG_1456.JPG",
-      "./images/IMG_1519.JPG",
-      "./images/IMG_1518.JPG",
+      "./images/IMG_1458.webp",
+      "./images/IMG_1456.webp",
+      "./images/IMG_1519.webp",
+      "./images/IMG_1518.webp",
     ],
     "180 gsm cotton fabric black down shoulder T-shirt baggy with Ferrari F40 Design"
   )
