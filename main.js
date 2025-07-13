@@ -80,12 +80,12 @@ class Product {
       <!-- Image hover switch -->
       <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden mb-5">
         <img
-          src="${this.images[0]}"
+          src="${this.images[0]}" loading="lazy"
           alt="${this.name}"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
         />
         <img
-          src="${this.images[1]}"
+          src="${this.images[1]}" loading="lazy"
           alt="${this.name}"
           class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
         />
